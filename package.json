@@ -9,7 +9,7 @@
   },
   "scripts": {
     "start": "parcel serve ./src/index.html",
-    "dev": "parcel serve ./src/index.html",
+    "dev": "parcel serve ./index.html",
     "build": "parcel build ./src/index.html"
   }
 }

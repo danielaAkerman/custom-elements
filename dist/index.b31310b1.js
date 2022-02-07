@@ -476,7 +476,7 @@ var _index8 = require("./components/footer/index");
     _index8.init();
 })();
 
-},{"./components/header/index":"1WBLn","./components/titulo/index":"9uXEu","./components/subtitulo/index":"2Ahja","./components/text-field/index":"l7C0L","./components/large/index":"bTDjE","./components/body/index":"ixZLO","./components/button-solid/index":"j8VIu","./components/button-outlined/index":"gd9yD","./components/footer/index":"4nDUJ"}],"1WBLn":[function(require,module,exports) {
+},{"./components/header/index":"1WBLn","./components/titulo/index":"9uXEu","./components/subtitulo/index":"2Ahja","./components/text-field/index":"l7C0L","./components/button-solid/index":"j8VIu","./components/large/index":"bTDjE","./components/body/index":"ixZLO","./components/button-outlined/index":"gd9yD","./components/footer/index":"4nDUJ"}],"1WBLn":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "init", ()=>init
@@ -621,6 +621,34 @@ function init() {
     customElements.define("textfield-el", TextField);
 }
 
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"JacNc"}],"j8VIu":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "init", ()=>init
+);
+function init() {
+    class ButtonSolid extends HTMLElement {
+        constructor(){
+            super();
+            this.render();
+        }
+        render() {
+            var label = this.getAttribute("label");
+            var div = document.createElement("div");
+            var style = document.createElement("style");
+            div.classList.add("root");
+            div.textContent = label;
+            style.textContent = `\n  \n            .root{\n              display: flex;\n              justify-content: center;\n              align-items: center;\n              width: 100%;\n              height: 55px;\n              background-color: rgb(7, 158, 158);\n              border-radius: 4px;\n              font-family: 'Poppins', sans-serif;\n            }\n            .root:hover{\n              background-color: rgb(15, 197, 197);\n            }\n            `;
+            var shadow = this.attachShadow({
+                mode: "open"
+            });
+            shadow.appendChild(div);
+            shadow.appendChild(style);
+        }
+    }
+    customElements.define("buttonsolid-el", ButtonSolid);
+}
+
 },{"@parcel/transformer-js/src/esmodule-helpers.js":"JacNc"}],"bTDjE":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
@@ -675,34 +703,6 @@ function init() {
         }
     }
     customElements.define("bodytext-el", Titulo);
-}
-
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"JacNc"}],"j8VIu":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "init", ()=>init
-);
-function init() {
-    class ButtonSolid extends HTMLElement {
-        constructor(){
-            super();
-            this.render();
-        }
-        render() {
-            var label = this.getAttribute("label");
-            var div = document.createElement("div");
-            var style = document.createElement("style");
-            div.classList.add("root");
-            div.textContent = label;
-            style.textContent = `\n  \n            .root{\n              display: flex;\n              justify-content: center;\n              align-items: center;\n              width: 100%;\n              height: 55px;\n              background-color: rgb(7, 158, 158);\n              border-radius: 4px;\n              font-family: 'Poppins', sans-serif;\n            }\n            .root:hover{\n              background-color: rgb(15, 197, 197);\n            }\n            `;
-            var shadow = this.attachShadow({
-                mode: "open"
-            });
-            shadow.appendChild(div);
-            shadow.appendChild(style);
-        }
-    }
-    customElements.define("buttonsolid-el", ButtonSolid);
 }
 
 },{"@parcel/transformer-js/src/esmodule-helpers.js":"JacNc"}],"gd9yD":[function(require,module,exports) {
