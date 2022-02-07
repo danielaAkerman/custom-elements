@@ -1,0 +1,19 @@
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+.contenedor-body {
+  padding: 30px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+.container-largetext {
+  width: 90%;
+  margin: 45px auto;
+}
+.container-buttons {
+  min-width: 312px;
+  max-width: 352px;
+  margin: 0 auto;
+}
